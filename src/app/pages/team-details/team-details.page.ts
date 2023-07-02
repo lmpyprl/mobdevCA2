@@ -35,7 +35,7 @@ export class TeamDetailsPage implements OnInit {
   saveArticle() {
     if (this.article) {
       this.favouriteService.saveArticle(this.article).then(() => {
-        this.isSaved = false;
+        this.isSaved = true;
       });
     }
   }

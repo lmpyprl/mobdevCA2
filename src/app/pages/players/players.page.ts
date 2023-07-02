@@ -17,6 +17,11 @@ export class PlayersPage implements OnInit {
     this.getSavedArticles();
   }
 
+  ionViewWillEnter() {
+    // Call the API again when the page is about to enter
+    this.getSavedArticles();
+  }
+
   showNewsArticle(article: News) {
     this.router.navigateByUrl('/tabs/players/preview', { state: { article } });
   }
