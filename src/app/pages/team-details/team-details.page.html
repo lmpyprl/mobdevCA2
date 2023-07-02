@@ -6,10 +6,10 @@
     <ion-title>{{ article?.title }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unsaveArticle()" *ngIf="isSaved">
-        <ion-icon name="star" slot="icon-only"></ion-icon>
+        <ion-icon name="bookmark" slot="icon-only"></ion-icon>
       </ion-button>
       <ion-button (click)="saveArticle()" *ngIf="!isSaved">
-        <ion-icon name="star-outline" slot="icon-only"></ion-icon>
+        <ion-icon name="bookmark-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -22,9 +22,7 @@
   </div>
 
   <div class="content">
-    <ion-button (click)="openURL()">Open URL</ion-button>
-   
-    <ion-button (click)="saveArticle()">Save Article</ion-button>
+    <ion-button (click)="openURL()">Open URL</ion-button>      
   </div>
   
 </ion-content>

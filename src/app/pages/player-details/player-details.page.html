@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color = "secondary">
     <ion-title>Irish News</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let article of news$ | async" (click)="showNewsArticle(article)">
+    <ion-item button detail lines="inset" class="list-item" *ngFor="let article of news$ | async" (click)="showNewsArticle(article)">
       <ion-thumbnail slot="start">
         <img [src]="article.urlToImage || 'assets/ieflag.png'" alt="Article Image">
       </ion-thumbnail>

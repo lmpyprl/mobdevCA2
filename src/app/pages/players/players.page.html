@@ -7,9 +7,9 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let article of savedArticles" (click)="showNewsArticle(article)">
+    <ion-item button detail lines="inset" class="list-item" *ngFor="let article of savedArticles" (click)="showNewsArticle(article)">
       <ion-thumbnail slot="start">
-        <img [src]="article.urlToImage" alt="Article Image">
+        <img [src]="article.urlToImage || 'assets/newsicon.png'" alt="Article Image">
       </ion-thumbnail>
       <ion-label>
         <h2>{{ article.title }}</h2>
