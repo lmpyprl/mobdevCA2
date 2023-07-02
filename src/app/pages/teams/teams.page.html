@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="search-container">
+    <ion-searchbar animated="true" placeholder="Search" class="search-input" [(ngModel)]="searchTerm"></ion-searchbar>
+    <ion-button (click)="searchNews(searchTerm)" class="search-button">Search</ion-button>
+  </div>
+  
+  
+
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let article of (news | async)" (click)="showNewsArticle(article)">
+      <ion-thumbnail slot="start">
+        <img [src]="article.urlToImage" alt="Article Image">
+      </ion-thumbnail>
+      
+      <ion-label>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
