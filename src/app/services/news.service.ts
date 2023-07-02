@@ -17,9 +17,15 @@ export class NewsService {
       country: 'ie',
       apiKey: this.apiKey
     };
-
     return this.http.get<{ articles: News[] }>(this.apiUrl, { params }).pipe(
         map(response => response.articles)
       );
   }
+
+  searchNews(term : string){
+    return this.http.get<{ articles: News[] }>(
+      'https://newsapi.org/v2/everything?q='+ term +'&apiKey=' + this.apiKey
+    ).pipe(map((response: { articles: News[] }) => response.articles));
+  }
+
 }

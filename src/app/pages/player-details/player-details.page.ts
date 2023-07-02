@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FavouriteService } from './../../services/favourite.service';
 import { NewsService } from './../../services/news.service';
 import { Router } from '@angular/router';
 import { News } from '../../news.interface';
@@ -12,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class PlayerDetailsPage implements OnInit {
   news$: Observable<News[]> | undefined;
-  constructor(private router: Router, private newsService: NewsService, private favouriteService: FavouriteService) { }
+  constructor(private router: Router, private newsService: NewsService) { }
 
   ngOnInit() {
     this.searchIrishNews();
