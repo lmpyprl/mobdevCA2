@@ -16,13 +16,20 @@
 </ion-header>
 
 <ion-content>
-  <div class="content">
-    {{ article?.content }}    
-    
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" >
+        <ion-img [src]="article?.urlToImage" alt="No Image Available"></ion-img>
+      </ion-col>
+      <ion-col size="12" size-md="6" >
+        <div class="content">
+          <h2>{{ article?.title }}</h2>
+          <p>{{ article?.author }}</p>
+          <div [innerHTML]="article?.content"></div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <div class="content">
-    <ion-button (click)="openURL()">Open URL</ion-button>      
-  </div>
-  
+  <ion-button expand="full" (click)="openURL()">Open URL</ion-button>
 </ion-content>
