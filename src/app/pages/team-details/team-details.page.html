@@ -21,7 +21,7 @@
       <ion-col size="12" size-md="6" >
         <ion-img [src]="article?.urlToImage" alt="No Image Available"></ion-img>
       </ion-col>
-      <ion-col size="12" size-md="6" >
+      <ion-col (click)="openURL()" size="12" size-md="6" class="clickable-area">
         <div class="content">
           <h2>{{ article?.title }}</h2>
           <p>{{ article?.author }}</p>
@@ -29,7 +29,5 @@
         </div>
       </ion-col>
     </ion-row>
-  </ion-grid>
-
-  <ion-button expand="full" (click)="openURL()">Open URL</ion-button>
+  </ion-grid>  
 </ion-content>
