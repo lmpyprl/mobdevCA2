@@ -11,7 +11,7 @@ const routes: Routes = [
       component: TabsPage,
       children: [
         {
-          path: 'teams',
+          path: 'Search',
           children: [
             {
               path: '',
@@ -24,7 +24,7 @@ const routes: Routes = [
           ]
         },
         {
-          path: 'players',
+          path: 'Saved',
           children: [
             {
               path: '',
@@ -37,7 +37,7 @@ const routes: Routes = [
           ]
         },
         {
-          path: 'player-details',
+          path: 'Ireland',
           children: [
             {
               path: '',
@@ -54,7 +54,7 @@ const routes: Routes = [
     },
     {
       path: '',
-      redirectTo: '/tabs/teams',
+      redirectTo: '/tabs/Search',
       pathMatch: 'full'
     }
   ];

@@ -22,7 +22,7 @@ export class PlayerDetailsPage implements OnInit {
   }
 
   showNewsArticle(article: News) {
-    this.router.navigateByUrl('/tabs/player-details/preview', { state: { article } });
+    this.router.navigateByUrl('/tabs/Ireland/preview', { state: { article } });
   }
 
 }

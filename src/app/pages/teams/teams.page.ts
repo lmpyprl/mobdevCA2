@@ -22,7 +22,7 @@ export class TeamsPage  {
 
   
   showNewsArticle(article: News) {
-    this.router.navigateByUrl('/tabs/teams/preview', { state: { article } });
+    this.router.navigateByUrl('/tabs/Search/preview', { state: { article } });
   }
   searchNews(term : string){
     this.news$ = this.newsService.searchNews(term);
