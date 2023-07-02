@@ -37,9 +37,18 @@
   
   .list-item.item-slide-in {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(100%);
+  }
+
+  .list-item.item-slide-in.ng-leave {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 
   .clickable-area {
     cursor: pointer;
   }
+
+  
+  
+  
