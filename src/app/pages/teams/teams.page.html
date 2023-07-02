@@ -7,7 +7,7 @@
 <ion-content class="ion-padding">
 
   <div class="search-container">
-    <ion-searchbar animated="true" placeholder="Search" class="search-input" [(ngModel)]="searchTerm"></ion-searchbar>
+    <ion-searchbar animated="true" placeholder="Search" class="search-input" [(ngModel)]="searchTerm" (keyup.enter)="searchNews(searchTerm)"></ion-searchbar>
     <ion-button (click)="searchNews(searchTerm)" class="search-button">Search</ion-button>
   </div>
   
