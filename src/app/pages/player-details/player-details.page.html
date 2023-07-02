@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>playerDetails</ion-title>
+    <ion-title>Irish News</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">playerDetails</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let article of news$ | async" (click)="showNewsArticle(article)">
+      <ion-thumbnail slot="start">
+        <img [src]="article.urlToImage || 'assets/ieflag.png'" alt="Article Image">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

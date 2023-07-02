@@ -36,6 +36,19 @@ const routes: Routes = [
             }
           ]
         },
+        {
+          path: 'player-details',
+          children: [
+            {
+              path: '',
+              loadChildren: () => import('../player-details/player-details.module').then( m => m.PlayerDetailsPageModule)
+            },             
+            {
+              path: 'preview',
+              loadChildren: () => import('../team-details/team-details.module').then( m => m.TeamDetailsPageModule)
+            }
+          ]
+        }
         
       ]
     },
